@@ -1,6 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poiret+One&family=Poppins&display=swap');
 body {
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#title {
+    background-image: linear-gradient(45deg, #ff0f7b, #f89b29);
+    color: white;
+    text-align: center;
+}
+
+#title h1 {
+    font-family: 'Poiret One', cursive;
 }
 section {
     width: 100vw;
@@ -11,6 +25,53 @@ section {
     font-family: 'Poppins', sans-serif;
 }
 
-section h1 {
-    font-size: 2vw;
+section p {
+    max-width: 50vw;
 }
+
+section h1 {
+    font-size: 4vw;
+}
+
+#scrollindicatorbox {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 7vw;
+    height: 100vh;
+}
+
+#scrollindicatorbox ul {
+    list-style-type:none;
+    position: relative;
+    left:2.5vw;
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+}
+#scrollindicatorbox ul li {
+    display: block;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px;
+}
+
+#scrollindicator {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    left:1.25vw;
+    transform: translateX(-50%);
+    border-radius: 100px;
+}
+
