@@ -2,7 +2,7 @@ const scroller = document.getElementById("scrollindicator");
 var windowsize = window.innerHeight
 var bodysize = document.body.parentNode.offsetHeight
 var sections = bodysize/windowsize
-scroller.style.top = 0.8*(windowsize/sections) + "px"
+scroller.style.top = 0.8*(windowsize/sections) + 11 + "px"
 var scrollsize = bodysize-windowsize
 var lastsection = 1
 
