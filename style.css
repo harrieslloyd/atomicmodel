@@ -73,5 +73,6 @@ a {
     left:1.25vw;
     transform: translateX(-50%);
     border-radius: 100px;
+    outline: 5px solid white;
 }
 
