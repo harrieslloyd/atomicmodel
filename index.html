@@ -4,36 +4,83 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Atomic Model</title>
-        <meta name="description" content="">
-        <link rel="icon" type="image/x-icon" href="atom.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Atomic Model</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/x-icon" href="atom.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="scrollindicatorbox">
-            <div id="scrollindicator"></div>
-            <ul>
-                <li><a href="#title">Top</a></li>
-                <li><a href="#dalton">Dalton</a></li>
-                <li><a href="#thomson">Thomson</a></li>
-                <li><a href="#rutherford">Rutherford</a></li>
-                <li><a href="#bohr">Bohr</a></li>
-            </ul>
+    <div id="scrollindicatorbox">
+        <div id="scrollindicator"></div>
+        <ul>
+            <li><a href="#title">Top</a></li>
+            <li><a href="#dalton">Dalton</a></li>
+            <li><a href="#thomson">Thomson</a></li>
+            <li><a href="#rutherford">Rutherford</a></li>
+            <li><a href="#bohr">Bohr</a></li>
+        </ul>
+    </div>
+    <section id="title">
+        <div>
+            <h1>The Forefathers of the Atomic Model</h1>
+            <p>Nate Hadar & Harries Lloyd</p>
         </div>
-        <section id="title"><div><h1>The Forefathers of the Atomic Model</h1><p>Nate Hadar & Harries Lloyd</p></div></section>
+    </section>
+    <section id="dalton">
+        <div>
+            <h1>Dalton</h1>
+            <p>Dalton is known as the father of the atomic theory. He discovered that elements consist of indivisible,
+                indestructible, small atoms, and different atoms make up different elements and compounds</p>
+        </div>
+        <model-viewer camera-controls disable-zoom id="logo" src="models/DaltonModel.glb" ar
+                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
+                poster="poster.webp" shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+    </section>
+    <section id="thomson">
+        <div>
+            <h1>JJ Thomson</h1>
+            <p>Thomson is credited with the discovery of the electron. He came up with the Plum Pudding Model - negative
+                electrons scattered across a jelly-like sphere of positively charged atoms. It was abandoned in 1911 for
+                the Rutherford atomic model.</p>
+        </div>
+        <model-viewer camera-controls disable-zoom id="logo" src="models/ThomsonModel.glb" ar
+                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
+                poster="poster.webp" shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+    </section>
+    <section id="rutherford">
+        <div>
+            <h1>Ernest Rutherford</h1>
+            <p>Known as the pioneer of radioactivity and the atom, Rutherford found that there are two different types
+                of radiation (alpha, and beta). He also discovered that Atoms are made up of mostly empty space
+                concentrated in a central area known as the positively charged Nucelus.</p>
+        </div>
+        <model-viewer camera-controls disable-zoom id="logo" src="models/RutherfordModel.glb" ar
+                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
+                poster="poster.webp" shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+    </section>
+    <section id="bohr">
+        <div>
+            <h1>Neils Bohr</h1>
+            <p>Bohr created the Bohr Model, Also known as the “Planetary Model,” in which the electrons surround the
+                nucleus in pathways known as orbits. It was the first model to use quantom theory, but it was difficult
+                to tell an atom's position and velocity at the same time.</p>
+        </div>
+        <model-viewer camera-controls disable-zoom id="logo" src="models/BohrModel.glb" ar
+                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
+                poster="poster.webp" shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+    </section>
 
-        <section id="dalton"><div><h1>Dalton</h1><p>Dalton is known as the father of the atomic theory. He discovered that elements consist of indivisible small atoms, and different atoms make up different elements. </p></div></section>
-        <section id="thomson"><div><h1>Dalton</h1><p>Dalton is known as the father of the atomic theory. </p></div></section>
-        <section id="rutherford"><div><h1>Dalton</h1><p>Dalton is known as the father of the atomic theory. </p></div></section>
-        <section id="bohr"><div><h1>Dalton</h1><p>Dalton is known as the father of the atomic theory. </p></div></section>
-        
-        <script src="script.js" async defer></script>
-    </body>
+    <script src="script.js" async defer></script>
+</body>
+
 </html>

@@ -52,7 +52,6 @@ function scrollind() {
     var y = window.scrollY;
     var sectionnumber = Math.round((y+windowsize)/windowsize)
     if (sectionnumber != lastsection) {
-        console.log((windowsize/sections)*sectionnumber)
         animatedMove('scrollindicator', 0.8*(windowsize/sections)*lastsection + (11), 0.8*(windowsize/sections)*sectionnumber + (11), 0.4);
         lastsection = sectionnumber;
     }
