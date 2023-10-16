@@ -14,6 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -28,6 +30,8 @@
             <li><a href="#thomson">Thomson</a></li>
             <li><a href="#rutherford">Rutherford</a></li>
             <li><a href="#bohr">Bohr</a></li>
+            <li><a href="#schrodinger">Schrödinger</a></li>
+            <li><a href="#heisenberg">Heisenberg</a></li>
         </ul>
     </div>
     <section id="title">
@@ -40,22 +44,40 @@
         <div>
             <h1>John Dalton</h1>
             <p>Dalton is known as the father of the atomic theory. He discovered that elements consist of indivisible,
-                indestructible, small atoms, and different atoms make up different elements and compounds.</p>
+                indestructible, small atoms, and different atoms make up different elements and compounds. He came up
+                with these 6 postulates:
+            <ol>
+                <li>All matter consists of indivisible particles called atoms.</li>
+                <li>Atoms of the same element are similar in shape and mass, but differ from the atoms of other
+                    elements.</li>
+                <li>Atoms cannot be created or destroyed.</li>
+                <li>Atoms of different elements may combine with each other in a fixed, simple, whole number ratios to
+                    form compound atoms.</li>
+                <li>Atoms of same element can combine in more than one ratio to form two or more compounds.</li>
+                <li>The atom is the smallest unit of matter that can take part in a chemical reaction.</li>
+            </ol>
+            </p>
         </div>
-        <model-viewer camera-controls disable-zoom id="logo" src="models/DaltonModel.glb" ar
-                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
-                poster="poster.webp" shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+        <div class="model" >
+            <model-viewer camera-controls disable-zoom id="logo" src="models/DaltonModel.glb" ar
+                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.png"
+                shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+                <small>In Dalton's Model, atoms are balls. Atom balls stick together to form compounds, shown here. </small>
+        </div>
     </section>
     <section id="thomson">
         <div>
             <h1>JJ Thomson</h1>
-            <p>Thomson is credited with the discovery of the electron. He came up with the Plum Pudding Model - negative
+            <p>Thomson is credited with the discovery of the electron. He came up with the <u>Plum Pudding Model</u> -
+                negative
                 electrons scattered across a jelly-like sphere of positively charged atoms. It was abandoned in 1911 for
-                the Rutherford atomic model.</p>
+                the <u>Rutherford model</u>.</p>
         </div>
-        <model-viewer camera-controls disable-zoom id="logo" src="models/ThomsonModel.glb" ar
-                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
-                poster="poster.webp" shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+        <div class="model" >
+            <model-viewer camera-controls disable-zoom id="logo" src="models/ThomsonModel.glb" ar
+                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.png"
+                shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+        </div>
     </section>
     <section id="rutherford">
         <div>
@@ -64,22 +86,53 @@
                 of radiation (alpha, and beta). He also discovered that Atoms are made up of mostly empty space
                 concentrated in a central area known as the positively charged Nucelus.</p>
         </div>
-        <model-viewer camera-controls disable-zoom id="logo" src="models/RutherfordModel.glb" ar
-                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
-                poster="poster.webp" shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+        <div class="model" >
+            <model-viewer camera-controls disable-zoom id="logo" src="models/RutherfordModel.glb" ar
+                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.png"
+                shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+        </div>
     </section>
     <section id="bohr">
         <div>
             <h1>Neils Bohr</h1>
-            <p>Bohr created the Bohr Model, Also known as the “Planetary Model,” in which the electrons surround the
-                nucleus in pathways known as orbits. It was the first model to use quantom theory, but it was difficult
-                to tell an atom's position and velocity at the same time.</p>
+            <p>Bohr created the <u>Bohr Model</u>, also known as the <u>Planetary Model</u>, in which the electrons
+                surround the nucleus in pathways known as orbits. It was the first model to use quantum theory, but it
+                was difficult to tell an atom's position and velocity at the same time.</p>
         </div>
-        <model-viewer camera-controls disable-zoom id="logo" src="models/BohrModel.glb" ar
-                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral"
-                poster="poster.webp" shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+        <div class="model" >
+            <model-viewer camera-controls autoplay disable-zoom id="logo" src="models/BohrModel.glb" ar
+                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.png"
+                shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+        </div>
     </section>
-
+    <section id="schrodinger">
+        <div>
+            <h1>Erwin Schrödinger</h1>
+            <p>Schrödinger discovered that electrons live in <u>orbitals</u> around the nucleus. Orbitals are regions
+                where an electron <b>can</b> be, and Schrödinger derived a mathmatical equation to determine the
+                probablity that an electron is in a certain place in the orbital: $$ {\hat{H} \Psi = E\Psi} $$ Which is really complicated, so we're not going to go into it. </p>
+        </div>
+        <div class="model" >
+            <model-viewer camera-controls disable-zoom id="logo" src="models/SchrodingerModel.glb" ar
+                ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.png"
+                shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer>
+                <small>Orbital around a nucleus</small>
+        </div>
+    </section>
+    <section id="heisenberg">
+        <div>
+            <h1>Werner Heisenberg</h1>
+            <p>Heisenberg discovered two major things in his career: The strong force, which holds particles in the
+                nucleus together, and the uncertainty principle. The uncertainty principle states that we cannot know
+                the position and speed/direction of a particle at the same time, and it is described in the equation: 
+                $$ {\Delta x\Delta y\geq \frac{h}{4\pi}} $$
+                Where ∆x is the uncertainty in position, ∆y is the uncertainty in momentum, and h is Planck's constant. As
+                our certainty in position goes up, our certainty in speed/direction must go down. </p>
+        </div>
+        <div class="model"><model-viewer camera-controls autoplay disable-zoom id="logo" src="models/UncertaintyModel.glb" ar
+            ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.png"
+            shadow-intensity="0" camera-orbit="24.66deg 85.96deg auto"></model-viewer><small>The more you know about position, the less you know about speed/direction, and vice-versa. <br> Green Bar: Uncertainty in Speed/Direction | Red bar: Uncertainty in position. </small></div>
+    </section>
     <script src="script.js" async defer></script>
 </body>
 

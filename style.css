@@ -29,7 +29,7 @@ section {
     font-family: 'Poppins', sans-serif;
 }
 
-section p {
+section:not(#title) div {
     max-width: 40vw;
 }
 
@@ -55,7 +55,7 @@ section h1 {
 }
 #scrollindicatorbox ul li {
     display: block;
-    height: 20%;
+    height: calc(100%/7);
     display: flex;
     align-items: center;
 }
@@ -77,9 +77,19 @@ a {
     left:1.25vw;
     transform: translateX(-50%);
     border-radius: 100px;
+    top: calc(80vh/7 + 30px);
 }
 
 model-viewer {
     width: 30vw;
     height: 30vh;
+}
+
+.model {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    width: 40vw;
 }

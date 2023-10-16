@@ -1,10 +1,20 @@
 const scroller = document.getElementById("scrollindicator");
-var windowsize = window.innerHeight
-var bodysize = document.body.parentNode.offsetHeight
-var sections = bodysize/windowsize
-scroller.style.top = 0.8*(windowsize/sections) + 11 + "px"
-var scrollsize = bodysize-windowsize
-var lastsection = 1
+var windowsize
+var bodysize
+var sections
+var scrollsize
+var lastsection
+
+window.addEventListener('DOMContentLoaded', () => {
+    windowsize = window.innerHeight
+    bodysize = document.body.parentNode.offsetHeight
+    console.log(bodysize)
+    sections = bodysize/windowsize
+    console.log(sections)
+    scroller.style.top = 0.8*(windowsize/sections) + 30 + "px"
+    scrollsize = bodysize-windowsize
+    scrollind()
+});
 
 document.querySelector("#scrollindicatorbox a").style.margin = (windowsize/sections)
 
@@ -52,7 +62,7 @@ function scrollind() {
     var y = window.scrollY;
     var sectionnumber = Math.round((y+windowsize)/windowsize)
     if (sectionnumber != lastsection) {
-        animatedMove('scrollindicator', 0.8*(windowsize/sections)*lastsection + (11), 0.8*(windowsize/sections)*sectionnumber + (11), 0.4);
+        animatedMove('scrollindicator', 0.8*(windowsize/sections)*lastsection + (30), 0.8*(windowsize/sections)*sectionnumber + (30), 0.4);
         lastsection = sectionnumber;
     }
   };
